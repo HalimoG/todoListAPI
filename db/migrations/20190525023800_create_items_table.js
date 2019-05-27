@@ -4,8 +4,9 @@ exports.up = function(knex, Promise) {
       .increments("id")
       .unsigned()
       .primary();
-    table.string("title");
     table.string("desc");
+    table.string("status");
+    table.string("due_date");
     table.bigInteger("list_id").references("lists.id");
   });
 };

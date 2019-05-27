@@ -4,6 +4,10 @@ exports.seed = function(knex, Promise) {
     .del()
     .then(function() {
       // Inserts seed entries
-      return knex("lists").insert([{ title: "groceries", user_id: 1 }]);
+      return knex("lists").insert([
+        { title: "groceries", user_id: 1 },
+        { title: "books to read", user_id: 1 },
+        { title: "recipes to try", user_id: 1 }
+      ]);
     });
 };
